@@ -1,0 +1,311 @@
+/* é uma boa pratica aplicar o conceito de mobal first pois focar no celular primeiro
+para depois transferir para o pc é muito mais facil do que pegar uma tela maior e diminuir
+por isso é a melhor escolha do que pc antes e celular depois
+responsividade = site acessivel para qualquer tamanho de tela*/
+
+
+/*Reset CSS
+O asterisco seleciona tudo mas é uma má pratica pois se o site for muito grande pode acabar dando lags*/
+body,figure,img,div,header,nav,main,ul,li,a,p,section,article,h1,h2,footer{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #141414;
+}
+
+figcaption{
+    display: none;
+}
+
+img{
+    max-width: 1200px;
+}
+
+/*ESTILO CABEÇALHO*/
+.cabecalho{
+    background-color: #141414;
+}
+
+/*ESTILO LOGO*/
+.cabecalho .cabecalho__logo{
+    text-align: center;
+    padding: 16px 0px;
+}
+
+.cabecalho .cabecalho__menu{
+    padding: 30px 0px;
+}
+.cabecalho .cabecalho__logo img{
+}
+.cabecalho .cabecalho__logo figcaption{}
+
+/*ESTILO DO MENU*/
+.cabecalho .cabecalho__menu{}
+.cabecalho .cabecalho__menu ul{}
+.cabecalho .cabecalho__menu ul li{}
+.cabecalho .cabecalho__menu li a{}
+
+/*ESTILO ÁREA DE CONFIGURAÇÃO*/
+.cabecalho .cabecalho__menuConfig{}
+.cabecalho .cabecalho__menuConfig ul{}
+.cabecalho .Cabecalho__menuConfig ul li{}
+.cabecalho .Cabecalho__menuConfig li a{}
+
+
+.cabecalho .cabecalho__menu, .cabecalho .cabecalho__menuConfig{
+    display: none;
+}
+
+/*ESTILO DO CONTEUDO PRINCIPAL*/
+main{
+}
+
+/*ESTILO SEÇÃO DESTAQUE*/
+.secaoDestaque{
+    background-image: url(../img/destaque.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 15px 20px;
+    /*nao usamos margin pq o padding é um preeenchimento interno e adiciona o espaço
+    internamente sem afetar o meu fundo entao sempre que tiver cor ou imagem de fundo
+    usar o padding pois com o margin é um espaçamento pra fora e causa espaços em branco
+    */
+}
+
+.secaoDestaque .secaoDestaque__IMG{}
+.secaoDestaque .secaoDestaque__IMG img{
+    width: 100%;
+    display: none;
+    /*essa porcentagem é relativa ao tamanho disponivel o tamanho total disponivel
+    e quem determina isso é a minha figure que é o pai, e como pai ocupa todo aquele
+    espaço a imagem vai ocupar 100% dele(se alterar a figure a imagem vai junto)*/
+}
+.secaoDestaque .secaoDestaque__IMG figcaption{}
+
+.secaoDestaque .secaoDestaque__descricaoDestaque{
+    color: #ffff;
+}
+.secaoDestaque .secaoDestaque__descricaoDestaque h1{}
+.secaoDestaque .secaoDestaque__descricaoDestaque h1 img{
+    width: 100%;
+    max-width: 180px;
+}
+.secaoDestaque .secaoDestaque__descricaoDestaque p{
+    margin: 10px 2px;
+    font-size: 0.7rem;
+    /*unidade de medida relativa ao tamanho do meu elemento raiz(o proprio html)*/
+}
+
+.secaoDestaque .secaoDestaque__navegacaoDestaque a{
+    background-color: white;
+    color: black;
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    display: inline-block;
+}
+.secaoDestaque .secaoDestaque__navegacaoDestaque a img{
+
+}
+
+/*ESTILO SEÇÃO FILMES*/
+.secaoFilmes{
+    color: #e5e5e5;
+    padding: 0 15px;
+    overflow-x:hidden ;
+    /*esconder o conteudo que sai da tela e não tem mais scroll na horizontal somente vertical
+    pois com o overflow raiden faz esconder o conteudo que sai da tela daquela area*/
+    margin-bottom:20px;
+
+}
+.secaoFilmes h2{
+    font-size: 1.1rem;
+}
+.secaoFilmes .secaoFilmes__listaFilmes{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    /*aplicou um overflow no eixo x scroll pois vai permitir fazer um scroll de algo que ja
+    saiu da tela*/
+
+    margin-top: 10px;
+    /*tudo que está saindo da tela é um overflow(explodindo da tela)
+    explodindo pra fora do que voce tem por natureza na tela*/
+}
+.secaoFilmes .secaoFilmes__listaFilmes li{
+    /*APRENDER CARROSEL*/
+   
+}
+.secaoFilmes .secaoFilmes__listaFilmes li figure{}
+.secaoFilmes .secaoFilmes__listaFilmes figure img{}
+.secaoFilmes .secaoFilmes__listaFilmes figure figcaption{}
+
+/*ESTILO RODAPE*/
+.rodape{
+    padding: 0px 20px;
+    margin-top: 30px;
+}
+
+.rodape .rodape__midiasSociais{}
+.rodape .rodape__midiasSociais ul{
+    display: flex;
+    
+
+}
+.rodape .rodape__midiasSociais ul li{
+    margin-right: 8px ;
+}
+.rodape .rodape__midiasSociais li a{
+    
+}
+.rodape .rodape__midiasSociais li a img{}
+
+.rodape .rodape__menuNavegacao{
+    margin: 16px 0px;
+}
+.rodape .rodape__menuNavegacao ul{}
+.rodape .rodape__menuNavegacao ul li{
+    margin-bottom: 4px;
+}
+.rodape .rodape__menuNavegacao li a{
+    color: #808080;
+}
+
+
+.rodape .rodape__linkCodigo{
+   border: 1px solid #808080;
+   padding:9px 15px;
+   display: inline-block;
+   margin-bottom: 20px;
+}
+.rodape p{
+    color: #808080;
+}
+/* quando chegar a hora de fazer o site de desktop a gente vai ter que usar um conceito
+chamado media queries
+1. e com ele a gente seta um tamanho minino para ele como se fosse uma condição
+apartir de tal tamanho faça essa estilização e aplique tal estilo
+2.voce pode aplicar quantos deles voce quiser ou achar necessario*/
+
+/*meio que do mobal pro desktop voce so sai aumentando tudo*/
+@media only screen and (min-width: 620px) {
+
+    .secaoDestaque {
+        padding: 100px 20px 42px;
+        margin-bottom: 5px;
+    }
+    
+    .secaoDestaque .secaoDestaque__descricaoDestaque h1 img{
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .secaoDestaque .secaoDestaque__descricaoDestaque{
+        color: #ffff;
+        max-width: 330px;
+    }
+
+    .rodape .rodape__menuNavegacao{
+        margin: 16px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+@media only screen and (min-width: 991px) {
+    .secaoDestaque .secaoDestaque__descricaoDestaque h1 img{
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .secaoDestaque {
+        padding: 150px 30px 60px;
+        margin-bottom: 8px;
+    }
+
+    .secaoDestaque .secaoDestaque__descricaoDestaque{
+        max-width: 500px;
+    }
+
+    .secaoDestaque .secaoDestaque__descricaoDestaque p{
+        font-size: 1.1rem;
+        margin: 14px 0 22px;
+    }
+
+    .secaoDestaque .secaoDestaque__navegacaoDestaque a{
+        padding: 10px 28px;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    .secaoFilmes h2{
+        font-size: 1.4rem;
+    }
+
+    .rodape{
+        padding: 0px 30px 30px;
+        margin-top: 30px;
+    }
+
+    .secaoFilmes{
+        padding: 0 20px;
+    }
+    
+    .cabecalho .cabecalho__menu, .cabecalho .cabecalho__menuConfig{
+        display: block;
+        flex-grow: 2;
+        /*O FLEX GROW É UMA PROPRIEDADE DO PROPRIO FLEX PARA SETAR 
+        E CRESCER, FALANDO PRA DIV CRESCER E OCUPAR O MAIOR ESPAÇO DISPONIVEL ALI
+        E DENTRO DO ESPAÇO QUERO QUE ESSE ELEMENTO ESPECIFICO CRESÇA E OCUPE MAIOR PARTE */
+    }
+    .cabecalho .container{
+        display: flex;
+    }
+
+    .cabecalho__menu{
+        margin-left: 20px;
+    }
+
+    .cabecalho__menu li{
+        display: inline-block;
+        margin-right: 20px ;
+    }
+
+    .cabecalho__menuConfig li{
+        display: inline-block;
+        margin-right: 20px ;
+    }
+
+    .cabecalho__menuConfig{
+        padding: 17px 0px;
+        text-align: right;
+    }
+
+    .cabecalho__menuConfig a{
+        color: white;
+    }
+    .cabecalho__menu a{
+        color: white;
+        font-size: 0.9rem;
+    }
+
+    .cabecalho .cabecalho__logo{
+        padding: 30px 0px;
+    }
+}
+/*container é basicamente uma forma de controlar o tamanho das coisas entao ele faz um max-width com elemenentos no meio, é uma div com uma classe container
+voce coloca ele dentro das seçoes para fazer esse trabalho*/
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;/*alinhar no centro de forma automatica o navegador se vira pra conseguir fazer isso*/
+}
